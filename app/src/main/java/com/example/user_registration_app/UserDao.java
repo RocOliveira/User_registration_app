@@ -20,6 +20,12 @@ public interface UserDao {
     @Insert
     void insert(User user);
 
+    //Metodfo para buscar todos os usuarios cadastrados no Banco de Dados
+    //A  anotação @Query permite definir uma consulta SQL personalizada
+    @Query("SELECT * FROM user")
+    List<User> getAllUsers();
+
+
 
 
     }
